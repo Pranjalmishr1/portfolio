@@ -7,13 +7,8 @@ import { BsCodeSquare } from "react-icons/bs";
 import { TbWorldWww } from "react-icons/tb";
 
 const Projects = () => {
-  // Sort projects by date in descending order (latest first)
-  const sortedProjects = projectsItem.projects
-    .slice()
-    .sort((a, b) => b.date.getTime() - a.date.getTime());
-
-  // Select the first 3 projects (latest 3)
-  const latestProjects = sortedProjects.slice(0, 3);
+  
+  const latestProjects = projectsItem.projects.slice(0, 3);
 
   return (
     <div className={styles.container}>

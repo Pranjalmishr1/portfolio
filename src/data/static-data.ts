@@ -20,7 +20,7 @@ export const heroItem = {
 
   contact: {
     title: "Contact me here",
-    url: "contact#",
+    url: "#contact",
   },
 
   cv: {
@@ -130,18 +130,24 @@ export const projectsItem = {
     {
   id: 4,
   title: "E-commerce Purchase Flow Automation (SauceDemo)",
+
+  image_url: "/project4.png",
+
   description:
-    "Automated an end-to-end product purchase workflow on SauceDemo using Selenium WebDriver with Page Object Model (POM). Covered login, product selection, cart validation, and checkout flow with explicit waits for dynamic element handling.",
+    "Automated an end-to-end product purchase workflow using Selenium WebDriver with Page Object Model (POM). Covered login, product selection, cart validation and checkout flow with explicit waits.",
 
-  image: "/project4.png",
+  date: new Date(2026, 2, 1),
 
-  date: "Mar 2026",
+  projectLink: "https://github.com/Pranjalmishr1/selenium-saucedemo",
 
   github: "https://github.com/Pranjalmishr1/selenium-saucedemo",
 
-  live: "",
-
-  technologies: ["Selenium", "JavaScript", "Node.js", "Automation Testing"],
+  technology: [
+    { id: 1, title: "Selenium" },
+    { id: 2, title: "JavaScript" },
+    { id: 3, title: "Node.js" },
+    { id: 4, title: "Automation Testing" }
+  ],
 },
   ],
 };
