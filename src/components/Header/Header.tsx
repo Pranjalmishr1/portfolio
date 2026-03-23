@@ -8,17 +8,26 @@ import MobileMenu from "../MobileMenu/MobileMenu";
 const Header = () => {
   return (
     <div className={styles.header}>
-      <h1 className={styles.logo}>Alpha97</h1>
+      
+      {/* Logo */}
+      <h1 className={styles.logo}>Pranjal Mishra</h1>
+
+      {/* Desktop Navigation */}
       {navItems &&
         navItems.map((item) => (
           <Link href={item.url} key={item.id} className={styles.navItem}>
             <h2 className={styles.title}>{item.title}</h2>
           </Link>
         ))}
+
+      {/* Dark Mode Toggle */}
       <ThemeToggle />
+
+      {/* Mobile Menu */}
       <div className={styles.mobileMenu}>
         <MobileMenu />
       </div>
+
     </div>
   );
 };
