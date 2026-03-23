@@ -37,7 +37,7 @@ const Hero = () => {
           <Link className={styles.socialLink} href={heroItem.iconOne.url}>
             <FiGithub />
           </Link>
-          <Link className={styles.socialLink} href={heroItem.iconOne.url}>
+          <Link className={styles.socialLink} href={heroItem.iconTwo.url}>
             <FiLinkedin />
           </Link>
         </div>
