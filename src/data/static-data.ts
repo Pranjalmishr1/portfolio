@@ -20,7 +20,7 @@ export const heroItem = {
 
   contact: {
     title: "Contact me here",
-    url: "#contact",
+    url: "mailto:24pranjalmishra2005@gmail.com",
   },
 
   cv: {
@@ -35,7 +35,7 @@ export const heroItem = {
 
   iconTwo: {
     title: "LinkedIn",
-    url: "https://linkedin.com/in/1pranjal-mishra",
+    url: "https://www.linkedin.com/in/1pranjal-mishra",
   },
 };
 
@@ -70,9 +70,9 @@ export const projectsItem = {
 
       date: new Date(2025, 4, 1),
 
-      projectLink: "#",
+      projectLink: "https://github.com/Pranjalmishr1/KIET_MEGAMART",
 
-      github: "#",
+      github: "https://github.com/Pranjalmishr1/KIET_MEGAMART",
 
       technology: [
         { id: 1, title: "React.js" },
@@ -94,9 +94,9 @@ export const projectsItem = {
 
       date: new Date(2024, 11, 1),
 
-      projectLink: "#",
+      projectLink: "https://github.com/Pranjalmishr1/AharaSetu_HungryToEat",
 
-      github: "#",
+      github: "https://github.com/Pranjalmishr1/AharaSetu_HungryToEat",
 
       technology: [
         { id: 1, title: "Node.js" },
@@ -117,9 +117,9 @@ export const projectsItem = {
 
       date: new Date(2025, 6, 1),
 
-      projectLink: "#",
+      projectLink: "https://github.com/Pranjalmishr1/Job-Placement_Prediction-ML-Model",
 
-      github: "#",
+      github: "https://github.com/Pranjalmishr1/Job-Placement_Prediction-ML-Model",
 
       technology: [
         { id: 1, title: "Python" },
