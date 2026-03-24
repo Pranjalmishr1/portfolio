@@ -1,64 +1,45 @@
 import React from "react";
 import styles from "./projects.module.css";
 import { projectsItem } from "@/data/static-data";
-import Image from "next/image";
 import Link from "next/link";
-import { BsCodeSquare } from "react-icons/bs";
-import { TbWorldWww } from "react-icons/tb";
 
 const Projects = () => {
-  
+  // show only first 3 projects on homepage
   const latestProjects = projectsItem.projects.slice(0, 3);
 
   return (
-    <div className={styles.container}>
-      <div className={styles.content}>
-        <h2 className={styles.title}>{projectsItem.title}</h2>
-      </div>
+    <div className={styles.container} id="projects">
+      <h1 className={styles.heading}>Projects</h1>
 
-      {latestProjects.map((project) => (
-        <div key={project.id} className={styles.projectCard}>
-          <Link href={project.projectLink}>
-            <Image
-              className={styles.image}
+      <div className={styles.projects}>
+        {latestProjects.map((project) => (
+          <div key={project.id} className={styles.projectCard}>
+            <img
               src={project.image_url}
-              width={400}
-              height={250}
-              alt=""
+              alt={project.title}
+              className={styles.projectImage}
             />
-          </Link>
 
-          <div className={styles.projectContent}>
-            <Link href={project.projectLink}>
-              <h2 className={styles.projectTitle}>{project.title}</h2>
+            <h2 className={styles.projectTitle}>{project.title}</h2>
+
+            <p className={styles.projectDesc}>
+              {project.description}
+            </p>
+
+            <Link
+              href={project.projectLink}
+              target="_blank"
+              className={styles.projectBtn}
+            >
+              View Project →
             </Link>
-            <p className={styles.projectDesc}>{project.description}</p>
-            <h5 className={styles.projectDate}>
-              Date: {project.date.toString().slice(0, 15)}
-            </h5>
-            <h4 className={styles.projectTech}>
-              {" "}
-              {project.technology.map((tech) => (
-                <p className={styles.tech}>{tech.title}</p>
-              ))}
-            </h4>
-            <div className={styles.code}>
-              <Link href={project.projectLink} className={styles.codeLink}>
-                <TbWorldWww />
-              </Link>
-              <Link href={project.github} className={styles.codeLink}>
-                <BsCodeSquare />
-              </Link>
-            </div>
           </div>
-        </div>
-      ))}
-
-      <div className={styles.button}>
-        <Link className={styles.btn} href={projectsItem.url}>
-          {projectsItem.btnTitle}
-        </Link>
+        ))}
       </div>
+
+      <Link href="/projects" className={styles.allProjectsBtn}>
+        View All Projects →
+      </Link>
     </div>
   );
 };
